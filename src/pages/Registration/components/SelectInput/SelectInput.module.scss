@@ -1,0 +1,43 @@
+@import '../../../../variables.scss';
+
+.SelectInput {
+    cursor: pointer;
+    border: 1px solid $color-white;
+    width: 40rem;
+    height: 4rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    background-color: $color-white;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    &__value {
+
+    }
+    &__options {
+        border: 1px solid $color-white;
+        padding-left: 2rem;
+        padding-top: 1rem;
+
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+
+        &:not(.opened) {
+            display: none;
+        }
+    }
+    &__option {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__value {
+        color: black;
+        font-weight: bold;
+    }
+}

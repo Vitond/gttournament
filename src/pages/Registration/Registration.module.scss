@@ -1,0 +1,74 @@
+@import '../../variables.scss';
+
+.Registration {
+    margin-top: 20rem;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    color: $color-white;
+
+    &__form {
+        font-size: 2rem;
+    }
+    &__row {
+       
+    }
+    &__label {
+
+    }
+    &__textInput {
+       
+    }
+    &__heading  {
+        margin-bottom: 3rem;
+    }
+    &__detailInfo {
+       
+    }
+    &__subheading {
+        text-shadow: none;
+    }
+    &__gameSelect {
+        &__games {
+            display: flex;
+            margin-top: 2rem;
+
+            & *:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+        &__game {
+            cursor: pointer;
+            padding: 1rem;
+            
+            display: block;
+
+            &.active {
+                border: 1px solid $color-white;
+            }
+        }
+    }
+    &__gameSpecificPart {
+        margin-top: 6rem;
+    }
+    &__final {
+        margin-top: 10rem;
+    }
+    &__agreements {
+
+    }
+    &__submit {
+        background-color: $color-blue;
+        width: 40rem;
+        height: 8rem;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+
+        display: block;
+
+        font-family: $font-main;
+        font-size: 3rem;
+        color: $color-white;
+    }
+}

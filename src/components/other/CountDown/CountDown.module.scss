@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+.CountDown {
+    display: flex;
+    flex-direction: column;
+
+    color: gray;
+
+    &__number {
+        color: $color-white;
+    }
+}

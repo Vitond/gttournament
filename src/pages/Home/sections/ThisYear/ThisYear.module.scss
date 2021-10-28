@@ -1,0 +1,83 @@
+@import '../../../../variables.scss';
+
+.ThisYear {
+    background-color: $color-blue-dark;
+    height: 90vh;
+
+    position: relative;
+    overflow: hidden;
+
+    &__timeAxis {
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+    }
+    &__background {
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    };
+    &__backgroundImage {
+        position: absolute;
+
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: auto;
+
+        &_0 {
+            clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+        }
+        &_1 {
+            z-index: -1;
+        };
+    }
+    &__content {
+       width: 90%;
+       height: 100%;
+       margin-left: auto;
+       margin-right: auto;
+       position: relative;
+    }
+    &__heading {
+        padding-top: 2rem;
+    }
+    &__descriptions {
+        margin-top: 2rem;
+
+        display: flex;
+        justify-content: space-between;
+    }
+    &__description {
+        width: max-content;
+
+        display: flex;
+        align-items: center;
+
+        & > *:not(:last-child) {
+            margin-right: 2rem;
+        }
+        
+        &__img {
+            width: 8rem;
+            height: 8rem;
+        }
+        &__times {
+
+        }
+        &__time {
+            font-size: 2rem;
+        }
+    }
+    &__dynamic {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 0;
+    }
+}

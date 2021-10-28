@@ -1,0 +1,35 @@
+@import '../../../../variables.scss';
+
+.About {
+    height: 90vh;
+
+    &__subheading {
+        margin-top: 4rem;
+    }
+    &__subsubheading {
+        margin-top: 2rem;
+    }
+    &__gameSelect {
+        display: flex;
+        margin-bottom: 2rem;
+
+        & > *:not(:last-child) {
+            margin-right: 3rem;
+        }
+        & > * {
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+        & .active {
+            border-bottom: 2px solid $color-white;
+        }
+    }
+    &__paragraph {
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+}

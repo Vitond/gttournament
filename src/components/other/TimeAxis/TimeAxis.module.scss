@@ -1,0 +1,51 @@
+@import '../../../variables.scss';
+
+.TimeAxis {
+    width: 100%;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    justify-content: stretch;
+    
+    &__line {
+        height: 4rem;
+        width: 100%;
+        border-top: 3px solid $color-white;
+        border-bottom: 3px solid $color-white;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: relative;
+    }
+    &__point {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 8px solid $color-white;
+        cursor: pointer;
+
+        position: absolute;
+        transform: translateX(-50%);
+
+        &.active {
+            border: 8px solid $color-blue;
+        }
+
+        // &:first-child {
+        //     transform: translateX(-1rem);
+        // }
+        // &:last-child {
+        //     transform: translateX(1rem);
+        // }
+    }
+    &__descriptor {
+        font-size: 2rem;
+
+        position: absolute;
+        top: 0;
+        transform: translateY(-4rem) translateX(-50%);
+    }
+}

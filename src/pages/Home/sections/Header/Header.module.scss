@@ -1,0 +1,89 @@
+@import '../../../../variables.scss';
+
+.Header {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    &__logo {
+        width: 20rem;
+        height: 20rem;
+    }
+    &__gameLogos {
+        display: flex;
+
+        position: absolute;
+        right: 6rem;
+        bottom: 4rem;
+
+        &__logo {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+    &__heading {
+        text-shadow: 4px 0px 0px $color-blue-dark-1;
+    }
+    &__subheading {
+        font-size: 5rem;
+        text-shadow: 4px 0px 0px $color-blue-dark-1;
+    }
+    &__cta {
+        background-color: transparent;
+        border: 2px solid $color-blue;
+        background-color: $color-blue;
+        border-radius: 1rem;
+        width: 45rem;
+        height: 8rem;
+        cursor: pointer;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        box-shadow: 4px 0px 0px $color-blue-dark-1;
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        position: relative;
+
+        font-family: $font-main;
+        color: $color-white;
+        font-size: 2.4rem;
+        text-decoration: none;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        &__logo {
+            width: 6rem;
+            height: 4.5rem;
+
+            opacity: .2;
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 20rem;
+    }
+    &__paragraph {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+    &__countDown {
+       margin-right: 2rem;
+       font-size: 2rem;
+    }
+    &__topRight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        right: 4rem;
+        top: 4rem;
+    }
+}
