@@ -14,14 +14,13 @@ import { Context } from './store/context';
 import { useLocation } from 'react-router';
 import { useEffect, useContext } from 'react';
 import Rules from './pages/Rules/Rules';
+import * as schools from './data/schools.json';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const context = useContext(Context);
   useEffect(() => {
-    axios.get('/schools').then((response) => {
-      context.setSchools(response.data.schools);
-    })
+      context.setSchools(schools.schools);
   }, [])
 
   const location = useLocation();

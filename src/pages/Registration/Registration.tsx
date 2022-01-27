@@ -31,8 +31,8 @@ const Registration = () => {
     }
 
     return <motion.div transition={routeTransition} key="registration" variants={routeVariants} initial="initial" animate="visible" exit="hidden" className={classes.Registration}>
-        {/* <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
-        <Heading type={headingTypes.h2} className={classes.Registration__subheading}>Důležité informace:</Heading> */}
+        <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
+        <Heading type={headingTypes.h2} className={classes.Registration__subheading}>Důležité informace:</Heading>
         <ul className={classes.Registration__importantList}>
             {/* <li><Paragraph className={classes.Registration__important}>
                Turnaje se můžou účastnit především studenti a učitelé pozvaných škol. Pro každý tým je však povolen jeden externista - účastník, který je ze školy, která není na seznamu pozvaných škol. Pokud není Vaše škola na seznamu, napište nám, můžeme ji kontaktovat!
@@ -47,10 +47,10 @@ const Registration = () => {
                 Registrace byla ukončena.
             </Paragraph></li>
         </ul>
-        {/* <VariantSelect className={classes.Registration__variantSelect} currentVariant={registrationVariant} setFunction={setRegistrationVariant}></VariantSelect>
+        <VariantSelect className={classes.Registration__variantSelect} currentVariant={registrationVariant} setFunction={setRegistrationVariant}></VariantSelect>
         <form className={classes.Registration__form}>
             {variant}
-        </form> */}
+        </form>
     </motion.div>
 };
 

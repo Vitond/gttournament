@@ -4,15 +4,14 @@ import Heading from '../../../../components/typography/Heading';
 import { headingTypes } from '../../../../types/types';
 import { useEffect, useState } from 'react';
 import axios from '../../../../axios/axios';
+import contestants from '../../../../data/contestants.json';
 import { GAMENAMES } from '../../../../constants/constants';
 
 const ContestantsSection = () => {
   
     const [teams, setTeams] = useState<{team: any[], members: any[]}[]>([]);
     useEffect(() => {
-        axios.get('/contestants').then(response => {
-            setTeams(response.data.teams)
-        })
+       setTeams(contestants.teams);
     }, []);
     const gameElements = Object.keys(GAMENAMES).map((key) => {
         const gameTeams = teams.filter((team) => {
