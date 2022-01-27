@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.302f4655.chunk.css",
+    "main.js": "/static/js/main.c20032b5.chunk.js",
+    "main.js.map": "/static/js/main.c20032b5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c772e103.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c772e103.js.map",
+    "static/js/2.068e43df.chunk.js": "/static/js/2.068e43df.chunk.js",
+    "static/js/2.068e43df.chunk.js.map": "/static/js/2.068e43df.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.302f4655.chunk.css.map": "/static/css/main.302f4655.chunk.css.map",
+    "static/js/2.068e43df.chunk.js.LICENSE.txt": "/static/js/2.068e43df.chunk.js.LICENSE.txt",
+    "static/media/CZC_logo.0cc27c7a.png": "/static/media/CZC_logo.0cc27c7a.png",
+    "static/media/counter-logo.4ca7c802.svg": "/static/media/counter-logo.4ca7c802.svg",
+    "static/media/counter-wallpaper.4ca60fed.webp": "/static/media/counter-wallpaper.4ca60fed.webp",
+    "static/media/discord-logo.0dbc33e0.svg": "/static/media/discord-logo.0dbc33e0.svg",
+    "static/media/league-logo.76f9ea73.png": "/static/media/league-logo.76f9ea73.png",
+    "static/media/logo.6f70f2ac.svg": "/static/media/logo.6f70f2ac.svg",
+    "static/media/lol-wallpaper.93c7e927.jpg": "/static/media/lol-wallpaper.93c7e927.jpg",
+    "static/media/mail-icon.1e22ca5f.svg": "/static/media/mail-icon.1e22ca5f.svg",
+    "static/media/minecraft-logo.d7672a93.svg": "/static/media/minecraft-logo.d7672a93.svg",
+    "static/media/minecraft-wallpaper.6bcfc721.webp": "/static/media/minecraft-wallpaper.6bcfc721.webp",
+    "static/media/rocket-logo.57593812.png": "/static/media/rocket-logo.57593812.png",
+    "static/media/rocket-wallpaper.2d18a6bc.webp": "/static/media/rocket-wallpaper.2d18a6bc.webp",
+    "static/media/twitch-logo.9665ad35.svg": "/static/media/twitch-logo.9665ad35.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c772e103.js",
+    "static/js/2.068e43df.chunk.js",
+    "static/css/main.302f4655.chunk.css",
+    "static/js/main.c20032b5.chunk.js"
+  ]
+}
