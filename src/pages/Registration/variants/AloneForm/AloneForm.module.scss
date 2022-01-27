@@ -1,0 +1,26 @@
+@import '../../../../variables.scss';
+
+.AloneForm {
+    &__paragraph {
+        margin-top: 2rem;
+        font-size: 2rem;
+        &_1 {
+            font-size: 3rem;
+        }
+    }
+    &__schoolSelect {
+        margin-top: 4rem;
+    }
+    &__submit {
+        margin-top: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__invalidMessages {
+        margin-top: 2rem;
+        color: red;
+        opacity: .8;    
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../../../variables.scss';
+
+.HowToRegister {
+    margin-top: 4rem;
+
+    &__paragraph {
+        margin-top: 2rem;
+        &_detail {
+            margin-top: .5rem;
+            font-size: 1.8rem;
+        }
+    }
+    &__link {
+        &:hover {
+            a {
+                color: $color-orange;
+            }
+        }
+        a {
+            color: $color-blue;
+            text-decoration: none;
+        }
+    }
+    &__cta {
+        background-color: transparent;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-white;
+        border: 2px solid $color-blue;
+
+        @media screen and (max-width: 450px){
+            width: 30rem;
+        }
+
+        &:hover {
+            background-color: $color-blue;
+            color: $color-white;
+        }
+    }
+}

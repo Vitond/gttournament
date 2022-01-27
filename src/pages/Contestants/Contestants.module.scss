@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.Contestants {
+    margin-top: 20rem;
+
+    color: $color-white;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 15rem;
+    }
+
+    &__heading {
+        margin-bottom: 10rem;
+    }
+}

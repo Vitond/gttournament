@@ -6,7 +6,7 @@ interface RowProps {
 }
 
 const Row: React.FC<RowProps> = props => {
-    return <div className={classes.Row}>
+    return <div className={[classes.Row, props.className].join(' ')}>
         {props.children}
     </div>
 };

@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const schedule = [
     {
         date: '17.11.2021',
-        description: 'Turnaj zahájíme soutěží v Rocket League. Následovat budou bedwars v Minecraftu.',
+        description: '',
         events: [
             {
                 game: GAMETYPES.ROCKET_LEAGUE,
@@ -42,25 +42,30 @@ const schedule = [
      ]   
     },
     {
-        date: '18.11.2021',
-        events: []
-    },
-    {
-        date: '19.11.2021',
+        date: '20.11.2021',
         events: [
             {
                 game: GAMETYPES.LOL,
                 segments: [
                     {
-                        beginTime: '16:00',
-                        endTime: '22:00'
+                        beginTime: '14:00',
+                        endTime: '20:00'
+                    }
+                ]  
+            },
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    {
+                        beginTime: '14:00',
+                        endTime: '20:00'
                     }
                 ]  
             }
         ]
     },
     {
-        date: '20.11.2021',
+        date: '21.11.2021',
         events: [
             {
                 game: GAMETYPES.LOL,
@@ -91,7 +96,7 @@ const schedule = [
         ]
     },
     {
-        date: '21.11.2021',
+        date: '27.11.2021',
         events: [
             {
                 game: GAMETYPES.LOL,
@@ -138,7 +143,7 @@ const ThisYear = () => {
         } else {
             BGclassName = classes.ThisYear__backgroundImage;
         }
-        return <img className={BGclassName} src={imgSrc}></img>
+        return <div className={classes.ThisYear__imageDiv}><img className={BGclassName} src={imgSrc}></img></div>
     });
     const descriptionElements = schedule[currentDay].events.map((event) => {
         const times = event.segments.map((segment) => { 

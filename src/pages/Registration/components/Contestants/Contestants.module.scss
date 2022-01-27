@@ -1,0 +1,81 @@
+@import '../../../../variables.scss';
+
+.Contestants {
+    &__contestantInput {
+        border: none;
+    }
+    &__contestant {
+        padding-top: 2rem;
+        //border-top: 1px solid $color-gray;
+    }
+    &__member {
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    &__controls {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+
+        display: flex;
+        align-items: center;
+
+        &__label {
+            margin-right: 2rem;
+
+            font-size: 2.2rem;
+        }
+        &__value {
+            width: 6rem;
+            height: 6rem;
+            font-weight: bold;
+            margin-right: 2rem;
+            font-size: 4rem;
+            border: 1px solid $color-white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__buttons {
+            display: flex;
+        }
+        &__plus,
+        &__minus {
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+
+            position: relative;
+
+            &:hover {
+                transform: translateY(2px);
+
+                &::after {
+                    background-color: $color-orange;
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $color-blue;
+            }
+        }
+        &__plus {
+            margin-right: 2rem;
+            &::after {
+                clip-path: polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
+            }
+        }
+        &__minus {
+            &::after {
+                clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+            }
+        }
+    }
+}

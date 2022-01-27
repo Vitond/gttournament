@@ -1,0 +1,26 @@
+@import '../../../../variables.scss';
+
+.Label  {
+    font-size: 1.8rem;
+
+    position: relative;
+
+    &.obligatory {
+        &::after {
+            width: 2rem;
+            height: 2rem;
+            content: "*";
+
+            color: $color-blue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

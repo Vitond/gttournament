@@ -1,0 +1,81 @@
+@import '../../../variables.scss';
+
+.Success {
+    width: 80%;
+    height: 80%;
+    background-color: $color-blue-dark;
+    border: 2px solid $color-white;
+
+    color: $color-white;
+    
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1;
+
+    @media screen and (max-width: 1000px) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    @media screen and (max-width: 600px) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 400px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__heading {
+        text-align: center;
+        margin-top: 6rem;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 10rem;
+        }
+    }
+    &__subheading {
+        margin-top: 6rem;
+        text-shadow: none;
+        text-align: center;
+    }
+    &__close {
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        &:hover {
+            &::after,
+            &::before {
+                background-color: $color-orange;
+            }
+        }
+
+        &::after,
+        &::before {
+            width: 100%;
+            height: 3px;
+            background-color: $color-white;
+            content: "";
+
+            display: block;
+
+            position: absolute;
+            top: 50%;
+        }
+        &::after {
+            transform: translateY(50%) rotate(45deg);
+        }
+        &::before {
+            transform: translateY(50%) rotate(-45deg);
+        }
+    }
+}

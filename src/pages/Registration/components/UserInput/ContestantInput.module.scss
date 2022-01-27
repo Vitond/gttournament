@@ -1,0 +1,25 @@
+@import '../../../../variables.scss';
+
+.ContestantInput {
+    //border-top: 1px solid $color-gray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    //border-bottom: 1px solid $color-gray;
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+        padding-right: 4rem;
+        width: 25%;
+        
+
+        @media screen and (max-width: 1000px) {
+            width: 50%;
+            padding-right: 3rem;
+            margin-right: 0;
+        }
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}

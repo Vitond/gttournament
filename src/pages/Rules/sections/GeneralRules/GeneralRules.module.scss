@@ -1,0 +1,58 @@
+@import '../../../../variables.scss';
+
+.GeneralRules {
+    width: 120rem;
+
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
+
+    &__heading {
+        margin-bottom: 3rem;
+    }
+    &__subheading {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        text-shadow: none;
+    }
+    &__paragraph {
+        font-size: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $color-blue;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+    &__list {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            margin-bottom: 1rem;
+            margin-left: 3rem;
+
+            position: relative;
+
+            &::before {
+                content: "";
+                width: .5rem;
+                height: .5rem;
+                background-color: $color-gray;
+                display: block;
+                border-radius: 50%;
+
+                position: absolute;
+                top: .9rem;
+                left: -2rem;
+            }
+        }
+    }
+}

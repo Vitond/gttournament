@@ -2,42 +2,47 @@
 
 .SelectInput {
     cursor: pointer;
-    border: 1px solid $color-white;
-    width: 40rem;
+    width: 100%;
     height: 4rem;
-    padding-left: 2rem;
-    margin-top: 1rem;
-    background-color: $color-white;
 
     display: flex;
     align-items: center;
 
     position: relative;
 
-    &__value {
-
+    &.opened {
+        z-index: 2;
     }
+
     &__options {
         border: 1px solid $color-white;
         padding-left: 2rem;
+        padding-right: 2rem;
+        max-height: 40rem;
         padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: $color-blue-dark;
 
         position: absolute;
         width: 100%;
         top: 100%;
         left: 0;
+        overflow-y: scroll;
 
         &:not(.opened) {
             display: none;
         }
     }
     &__option {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
         &:not(:last-child) {
-            margin-bottom: 1rem;
+            border-bottom: 1px solid $color-gray;
         }
-    }
-    &__value {
-        color: black;
-        font-weight: bold;
+
+        &:hover {
+            color: $color-blue;
+        }
     }
 }

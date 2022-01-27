@@ -1,7 +1,8 @@
 @import '../../../../variables.scss';
 
 .About {
-    height: 90vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     &__subheading {
         margin-top: 4rem;
@@ -13,6 +14,10 @@
         display: flex;
         margin-bottom: 2rem;
 
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+
         & > *:not(:last-child) {
             margin-right: 3rem;
         }
@@ -22,9 +27,17 @@
             &:hover {
                 transform: translateY(-2px);
             }
+            &:not(.active) {
+                color: $color-gray;
+                text-shadow: none;
+            }
         }
         & .active {
             border-bottom: 2px solid $color-white;
+
+            @media screen and (max-width: 900px) {
+               border: none;
+            }
         }
     }
     &__paragraph {

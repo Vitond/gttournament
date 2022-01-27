@@ -1,0 +1,47 @@
+@import '../../../../variables.scss';
+
+.CheckBoxInput {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    &__realInput {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    &__customCheckBox {
+        width: 3rem;
+        height: 3rem;
+        background-color: $color-white;
+
+        &.checked {
+            background-color: $color-orange;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            border: 2px solid $color-orange;
+        }
+    }
+    &__checkmark {
+        width: 70%;
+        height: 40%;
+        background-color: $color-white;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 37.5% 50%, 37.5% 100%, 0 100%);
+        transform: rotate(-45deg) scaleY(-1);
+
+        display: none;
+
+        z-index: 1;
+
+        &.checked {
+            display: block;          
+        }
+    }
+}

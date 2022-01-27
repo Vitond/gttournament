@@ -1,0 +1,53 @@
+@import '../../../../variables.scss';
+
+.ContestantsSection {
+    margin-top: 10rem;
+    padding-bottom: 10rem;
+
+    font-size: 2rem;
+
+    &__gameheading {
+        font-size: 3rem;
+        text-shadow: none;
+        font-weight: bold;
+    }
+    &__game {
+        margin-top: 4rem;
+        &__teams {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__team {
+        margin-top: 3rem;
+        margin-right: 4rem;
+
+        width: 40rem;
+
+        @media screen and (max-width: 900px) {
+            width:calc(50% - 2rem);
+            margin-right: 2rem;
+        }
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &__members {
+            margin-left: 2rem;
+        }
+        &__name {
+            font-weight: bold;
+            color: orange;
+        }
+        &__member {
+            display: flex;
+            &__role {
+                margin-left: auto;
+            }
+            &__name {
+
+            }
+        }
+    }
+}

@@ -3,8 +3,13 @@
 .TimeAxis {
     width: 100%;
     display: flex;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    @media screen and (max-width: 1000px) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
     justify-content: stretch;
     
@@ -33,13 +38,9 @@
         &.active {
             border: 8px solid $color-blue;
         }
-
-        // &:first-child {
-        //     transform: translateX(-1rem);
-        // }
-        // &:last-child {
-        //     transform: translateX(1rem);
-        // }
+        &:hover {
+            border: 8px solid $color-orange;
+        }
     }
     &__descriptor {
         font-size: 2rem;
@@ -47,5 +48,9 @@
         position: absolute;
         top: 0;
         transform: translateY(-4rem) translateX(-50%);
+
+        @media screen and (max-width: 400px) {
+            font-size: 1.4rem;
+        }
     }
 }

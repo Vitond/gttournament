@@ -2,31 +2,49 @@
 
 .Registration {
     margin-top: 20rem;
+    margin-bottom: 30rem;
     padding-left: 5%;
     padding-right: 5%;
+    min-height: 100vh;
 
     color: $color-white;
 
+    @media screen and (max-width: 1000px) {
+        margin-top: 15rem;
+    }
+
+    &__variantSelect {
+        margin-bottom: 2rem;
+    }
     &__form {
         font-size: 2rem;
     }
-    &__row {
-       
-    }
-    &__label {
-
-    }
-    &__textInput {
-       
-    }
     &__heading  {
         margin-bottom: 3rem;
-    }
-    &__detailInfo {
-       
+
+        @media screen and (max-width: 550px) {
+            font-size: 5rem;
+        }
+        @media screen and (max-width: 420px) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 3.3rem;
+        }
     }
     &__subheading {
+        text-transform: uppercase;
+    }
+    &__detailInfo {
+    
+    }
+    &__subheading {
+        font-size: 4rem;
         text-shadow: none;
+
+        @media screen and (max-width: 550px) {
+            font-size: 2.5rem;
+        }
     }
     &__gameSelect {
         &__games {
@@ -53,6 +71,32 @@
     }
     &__final {
         margin-top: 10rem;
+    }
+    &__important {
+        color: $color-orange;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        a {
+            color: $color-white;
+            text-decoration: none;
+
+            &:hover {
+                
+            }
+        }
+        @media screen and (max-width: 700px) {
+            font-size: 1.9rem;
+        }
+    }
+    &__importantList {
+        padding-top: 1rem;
+        width: 80rem;
+        margin-bottom: 6rem;
+        list-style: none;
+
+        @media screen and (max-width: 700px) {
+            width: 90%;
+        }
     }
     &__agreements {
 

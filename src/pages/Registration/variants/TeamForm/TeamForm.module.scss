@@ -1,0 +1,14 @@
+.TeamForm {
+    &__submit {
+        margin-top: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__invalidMessages {
+        margin-top: 2rem;
+        color: red;
+        opacity: .8;    
+    }
+}

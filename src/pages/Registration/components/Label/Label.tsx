@@ -3,11 +3,12 @@ import React from 'react';
 
 interface LabelProps {
     className?: string,
-    htmlFor?: string
+    htmlFor?: string,
+    obligatory?: boolean
 }
 
 const Label: React.FC<LabelProps> = props => {
-    return <label htmlFor={props.htmlFor} className={classes.Label}>
+    return <label htmlFor={props.htmlFor} className={[classes.Label, props.obligatory? classes.obligatory : '', props.className].join(' ')}>
         {props.children}
     </label>
 };

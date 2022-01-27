@@ -7,9 +7,17 @@ import { GAMETYPES } from '../../../../types/types';
 import Paragraph from '../../../../components/typography/Paragraph';
 import CountDown from '../../../../components/other/CountDown/CountDown';
 import GameLogo from '../../../../components/other/GameLogo/GameLogo';
+import { useHistory } from 'react-router';
+import CTA from '../../../../components/layout/CTA/CTA';
+import { withRouter } from 'react-router';
 import discordLogo from '../../../../assets/discord-logo.svg';
 
-const Header = () => {
+interface HeaderProps {
+
+}
+
+const Header: React.FC<HeaderProps> = props => {
+    const history = useHistory();
     return <Section className={classes.Header}>
             <div className={classes.Header__gameLogos}>
                 <GameLogo className={classes.Header__gameLogos__logo} game={GAMETYPES.MINECRAFT}></GameLogo>
@@ -29,16 +37,18 @@ const Header = () => {
                 <Paragraph className={classes.Header__paragraph}>
                     Středoškolský turnaj v počítačových hrách, organizovaný studentským parlamentem Gymnázia v Tišnově ke příležitosti dne studentstva.
                 </Paragraph>
-                <a href="https://discord.gg/mUF2Udvdvn" className={classes.Header__cta}>
+                <CTA onClick={() => {
+                    window.location.href="https://discord.gg/mUF2Udvdvn"
+                }} className={classes.Header__cta}>
                     Spoj se s námi na discordu!
                     <img className={classes.Header__cta__logo} src={discordLogo} alt="Discord logo"></img>
-                </a> 
+                </CTA> 
             </div>
             <div className={classes.Header__topRight}>
-                <CountDown className={classes.Header__countDown}></CountDown>
+                {/* <CountDown className={classes.Header__countDown}></CountDown> */}
                 <img className={classes.Header__logo} src={logo} alt="GT Tournament Logo"></img>
             </div>  
     </Section>
 };
 
-export default Header;
+export default withRouter(Header);

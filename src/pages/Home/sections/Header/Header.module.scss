@@ -2,21 +2,46 @@
 
 .Header {
     width: 100vw;
+    min-height: 80rem;
     height: 100vh;
 
     position: relative;
 
+    @media screen and (max-width: 1100px) {
+       min-height: unset;
+       height: 80rem;
+    }
+    @media screen and (max-width: 400px) {
+        height: 70rem;
+    }
+
     &__logo {
         width: 20rem;
         height: 20rem;
+
+        @media screen and (max-width: 1000px) {
+            width: 15rem;
+            height: 15rem;
+        }
+        @media screen and (max-width: 800px) {
+            width: 10rem;
+            height: 10rem;
+        }
     }
     &__gameLogos {
         display: flex;
 
         position: absolute;
         right: 6rem;
-        bottom: 4rem;
+        bottom: 6rem;
 
+        @media screen and (max-width: 1100px) {
+            bottom: 4rem;
+        }
+        @media screen and (max-width: 1000px) {
+           display: none;
+        }
+      
         &__logo {
             &:not(:last-child) {
                 margin-right: 2rem;
@@ -24,40 +49,31 @@
         }
     }
     &__heading {
-        text-shadow: 4px 0px 0px $color-blue-dark-1;
+       
     }
     &__subheading {
         font-size: 5rem;
         text-shadow: 4px 0px 0px $color-blue-dark-1;
+
+        @media screen and (max-width: 500px) {
+            font-size: 3rem;
+        }
     }
     &__cta {
-        background-color: transparent;
-        border: 2px solid $color-blue;
-        background-color: $color-blue;
-        border-radius: 1rem;
-        width: 45rem;
-        height: 8rem;
-        cursor: pointer;
-        padding-right: 4rem;
-        padding-left: 4rem;
-        box-shadow: 4px 0px 0px $color-blue-dark-1;
+        text-transform: uppercase;
+        font-weight: bold;
 
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
-
-        position: relative;
-
-        font-family: $font-main;
-        color: $color-white;
-        font-size: 2.4rem;
-        text-decoration: none;
-
-        &:hover {
-            transform: translateY(-2px);
+        @media screen and (max-width: 1000px) {
+            width: 40rem !important;
         }
-
+        @media screen and (max-width: 500px) {
+            width: 40rem !important;
+        }
+        @media screen and (max-width: 420px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            width: 30rem !important;
+        }
         &__logo {
             width: 6rem;
             height: 4.5rem;
@@ -68,10 +84,24 @@
     &__content {
         position: absolute;
         top: 20rem;
+
+        @media screen and (max-width: 1000px) {
+            top: 15rem;
+        }
     }
     &__paragraph {
+        width: 80rem;
         margin-top: 6rem;
         margin-bottom: 6rem;
+
+        @media screen and (max-width: 800px) {
+           width: 90%;
+        }
+        @media screen and (max-width: 700px) {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            font-size: 2.4rem;
+        }
     }
     &__countDown {
        margin-right: 2rem;
@@ -85,5 +115,14 @@
         position: absolute;
         right: 4rem;
         top: 4rem;
+
+        @media screen and (max-width: 1000px) {
+            top: 2rem;
+            right: 2rem;
+        }
+        @media screen and (max-width: 700px) {
+            right: unset;
+            left: 5rem;
+        }
     }
 }

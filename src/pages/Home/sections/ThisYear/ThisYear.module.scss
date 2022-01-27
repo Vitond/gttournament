@@ -2,10 +2,14 @@
 
 .ThisYear {
     background-color: $color-blue-dark;
-    height: 90vh;
+    height: 80vh;
 
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: 1000px) {
+        height: 100rem;
+    }
 
     &__timeAxis {
         position: absolute;
@@ -15,12 +19,38 @@
     &__background {
         width: 100%;
         height: 100%;
-        opacity: .4;
 
         position: absolute;
+        opacity: .2;
         top: 0;
         left: 0;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+        }
     };
+    &__imageDiv {
+        @media screen and (max-width: 1000px) {
+
+            position: relative;
+            width: 100%;
+            height: 50%;
+            top: 0;
+            left: 0;
+
+            display: flex;
+
+            overflow: hidden;
+            &:first-child {
+                border-bottom: 4px solid $color-white;
+            }
+            &:last-child {
+               
+            }
+        }
+        
+    }
     &__backgroundImage {
         position: absolute;
 
@@ -29,8 +59,20 @@
         left: 0;
         height: auto;
 
+        @media screen and (max-width: 1400px) {
+            transform: scale(2);
+        }
+        @media screen and (max-width: 500px) {
+            transform: scale(4);
+        }
+
         &_0 {
             clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+
+            @media screen and (max-width: 1000px) {
+               clip-path: none;
+               z-index: -1;
+            }
         }
         &_1 {
             z-index: -1;
@@ -45,12 +87,21 @@
     }
     &__heading {
         padding-top: 2rem;
+
+        @media screen and (max-width: 500px) {
+            font-size: 4rem;
+        }
     }
     &__descriptions {
         margin-top: 2rem;
 
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            height: 50%;
+        }
     }
     &__description {
         width: max-content;

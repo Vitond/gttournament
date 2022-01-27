@@ -62,21 +62,19 @@ const About = () => {
     }
 
     return <Section className={classes.About}>
+       
         <Heading type={headingTypes.h1} className={classes.About__heading}>O turnaji</Heading>
         <Paragraph className={classes.About__paragraph}>
             GT Tournament je turnaj v počítačových hrách, který je už třetí rok pořádaný studentským parlamentem Gymnázia v Tišnově.
             Doposud se mohli turnaje účastnit výhradně studenti Gymnázia v Tišnově, nyní se však turnaj rozšiřuje a je schopný pojmout více škol. 
         </Paragraph>
         <Paragraph className={classes.About__paragraph}>
-           Kromě organizace turnajů komentume turnaje živě na platformě Twitch. Odkaz na twitch naleznete vždy v rozpisu dní nahoře, vedle příslušného eventu.
+           Kromě organizace turnajů komentujeme turnaje živě na platformě Twitch. Odkaz na twitch naleznete vždy v rozpisu dní nahoře, vedle příslušného eventu.
         </Paragraph>
-        <Heading className={classes.About__subheading} type={headingTypes.h2}>Hry</Heading>
+        {/* <Heading className={classes.About__subheading} type={headingTypes.h2}>Hry</Heading>
         {gameSelect}
-        {gameDescription}
-        <Heading className={classes.About__subheading} type={headingTypes.h2}>Jak se přihlásit?</Heading>
-        <Paragraph className={classes.About__paragraph}>
-            Abyste se mohli přihlásit, musí být Vaše škola oficiálně pozvaná. Jestli je Vaše škola pozvaná, můžete se zúčastnit zde.
-        </Paragraph>
+        {gameDescription} */}
+      
     </Section>;
 };
 

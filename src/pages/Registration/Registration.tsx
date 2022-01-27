@@ -1,16 +1,17 @@
 import classes from './Registration.module.scss';
 import { headingTypes } from '../../types/types';
 import Heading from '../../components/typography/Heading';
-import GameLogo from '../../components/other/GameLogo/GameLogo';
-import { GAMETYPES } from '../../types/types';
-import React, { useState } from 'react';
-import Row from './components/Row/Row';
-import Label from './components/Label/Label';
-import TextInput from './components/TextInput/TextInput';
-import DetailedInfo from './components/DetailedInfo/DetailedInfo';
+import { GAMETYPES, REGISTRATIONVARIANTS } from '../../types/types';
+import React, { useState} from 'react';
+import { motion } from 'framer-motion';
+import { routeVariants, routeTransition } from '../../animations/animations';
 
-//Game forms
-import MinecraftForm from './GameForms/MinecraftForm';
+
+//Variants
+import TeamForm from './variants/TeamForm/TeamForm';
+import AloneForm from './variants/AloneForm/AloneForm';
+import VariantSelect from './components/VariantSelect/VariantSelect';
+import Paragraph from '../../components/typography/Paragraph';
 
 const games = [
     GAMETYPES.MINECRAFT,
@@ -20,60 +21,37 @@ const games = [
 ]
 
 const Registration = () => {
-    const [name, setName] = useState('');
-    const [discordName, setDiscordName] = useState('');
-    const [curGame, setGame] = useState(GAMETYPES.MINECRAFT);
+    const [registrationVariant, setRegistrationVariant] = useState<(REGISTRATIONVARIANTS | null)>(null);
 
-    let gameSpecificPart = null;
-
-    if (curGame === GAMETYPES.MINECRAFT) {
-        gameSpecificPart = <MinecraftForm></MinecraftForm>;
+    let variant = null;
+    if (registrationVariant === REGISTRATIONVARIANTS.TEAM) {
+        variant = <TeamForm></TeamForm>;
+    } else if (registrationVariant === REGISTRATIONVARIANTS.ALONE) {
+        variant = <AloneForm></AloneForm>;
     }
 
-    return <div className={classes.Registration}>
-        <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
+    return <motion.div transition={routeTransition} key="registration" variants={routeVariants} initial="initial" animate="visible" exit="hidden" className={classes.Registration}>
+        {/* <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
+        <Heading type={headingTypes.h2} className={classes.Registration__subheading}>Důležité informace:</Heading> */}
+        <ul className={classes.Registration__importantList}>
+            {/* <li><Paragraph className={classes.Registration__important}>
+               Turnaje se můžou účastnit především studenti a učitelé pozvaných škol. Pro každý tým je však povolen jeden externista - účastník, který je ze školy, která není na seznamu pozvaných škol. Pokud není Vaše škola na seznamu, napište nám, můžeme ji kontaktovat!
+            </Paragraph></li>
+            <li> <Paragraph className={classes.Registration__important}>
+            Všichni účastníci, kteří během turnaje nebudou plnoletí, musí odevzdat <a href="/parent_agreement.pdf" download="parent_agreement">souhlas rodičů s účastí v turnaji</a> na turnajvpocitacovychhrach@gym-tisnov.cz
+            </Paragraph></li>
+            <li><Paragraph className={classes.Registration__important}>
+                Přihlášky můžete podávat do 14.11.2021
+            </Paragraph></li> */}
+            <li><Paragraph className={classes.Registration__important}>
+                Registrace byla ukončena.
+            </Paragraph></li>
+        </ul>
+        {/* <VariantSelect className={classes.Registration__variantSelect} currentVariant={registrationVariant} setFunction={setRegistrationVariant}></VariantSelect>
         <form className={classes.Registration__form}>
-            <Row>
-                <Label className={classes.Registration__label} htmlFor="name">Zadejte, prosím, Vaše jméno</Label>
-                <TextInput value={name} setFunction={setName} className={classes.Registration__textInput} id="name"></TextInput>
-            </Row>
-            <Row>
-                <Label className={classes.Registration__label} htmlFor="dname">Zadejte, prosím, Vaše jméno na discordu</Label>
-                <DetailedInfo>I s čtyřmístným číselným kódem #xxxx. (například: viotal#1256)</DetailedInfo>
-                <TextInput value={discordName} setFunction={setDiscordName} className={classes.Registration__textInput} id="dname"></TextInput>
-            </Row>
-            <div className={classes.Registration__gameSelect}>
-                <Label className={classes.Registration__label}>
-                    Vyberte si jednu z her, na kterou se chcete přihlásit. Pokud se chcete přihlásit do více her, musíte vyplnit přihlášku dvakrát.
-                    Není možné se přihlásit zároveň do League of Legends a Counter-Strike: Global Offensive, protože turnaje se budou prolínat.
-                </Label>
-                <div className={classes.Registration__gameSelect__games}>
-                   {games.map((game) => {
-                       let className = classes.Registration__gameSelect__game;
-                       if (game === curGame) {
-                           className += " " + classes.active;
-                       }
-                       return <GameLogo 
-                       onClick={() => {
-                           setGame(game);
-                       }}
-                       className={className} game={game}></GameLogo>
-                   })}
-                </div>
-            </div>
-            <div className={classes.Registration__gameSpecificPart}>
-                {gameSpecificPart}
-            </div>
-            <div className={classes.Registration__final}>
-                   <div className={classes.Registration__agreements}>
-
-                   </div>
-                   <button className={classes.Registration__submit}>
-                        Odeslat přihlášku
-                   </button>
-            </div>
-        </form>
-    </div>
+            {variant}
+        </form> */}
+    </motion.div>
 };
 
 export default Registration;

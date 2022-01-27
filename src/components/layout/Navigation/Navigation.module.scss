@@ -12,6 +12,20 @@
     position: absolute;
     z-index: 1;
 
+    @media screen and (max-width: 1000px) {
+        padding-left: 5rem;
+    }
+
+    &.mobile {
+        height: auto;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        
+        justify-content: flex-end;
+
+        position: fixed;
+    }
+
     &__item {
         margin-right: 2rem;
 
@@ -23,15 +37,61 @@
         list-style: none;
 
         display: flex;
+
+        &.mobile {
+            width: 100vw;
+            height: 100vh;
+            background-color: $color-blue-dark;
+            padding-top: 16rem;
+            padding-right: 4rem;
+
+            flex-direction: column;
+            align-items: flex-end;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            & li {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                & a {
+                    font-size: 3.3rem;
+                }
+            }
         }
+    }
 
     &__link {
         text-decoration: none;
         color: white;
         font-size: 2.3rem;
 
+        &:hover {
+            color: $color-orange;
+            transform: translateY(-2px);
+        }
         &.active {
             font-weight: bold;
+        }
+    }
+    &__hamburger {
+        width: 6rem;
+        height: 6rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        position: relative;
+
+        &__line{
+            height: 1rem;
+            width: 100%;
+            background-color: $color-white;
+            border-top: 2px solid $color-blue;
         }
     }
 }

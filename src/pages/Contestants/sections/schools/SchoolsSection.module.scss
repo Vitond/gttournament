@@ -1,0 +1,20 @@
+@import '../../../../variables.scss';
+
+.SchoolsSection {
+    font-size: 2.2rem;
+
+    &__schools {
+        margin-top: 2rem;
+        height: 40rem;
+        list-style: none;
+        display: flex;
+
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+    &__school {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $color-blue;
+    }
+}

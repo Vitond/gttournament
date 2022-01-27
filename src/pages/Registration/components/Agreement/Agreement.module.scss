@@ -1,0 +1,35 @@
+@import '../../../../variables.scss';
+
+.Agreement {
+    margin-top: 2rem;
+
+    a {
+        text-decoration: none;
+        color: $color-blue;
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
+    
+    &__label {
+        font-size: 1.8rem;
+
+        margin-right: 2rem;
+    }
+    &__row {
+        margin-bottom: .5rem;
+        width: 65rem;
+
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @media screen and (max-width: 650px) {
+            width: 40rem;
+        }
+        @media screen and (max-width: 400px) {
+            width: 100%;
+        }
+    }
+}
