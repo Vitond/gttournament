@@ -32,13 +32,13 @@ const Header: React.FC<HeaderProps> = props => {
                     Gymnázia Tišnov
                 </Heading>
                 <Heading className={classes.Header__subheading} type={headingTypes.h2}>
-                    17.11-21.11
+                    17.6 - 26.6
                 </Heading>
                 <Paragraph className={classes.Header__paragraph}>
-                    Středoškolský turnaj v počítačových hrách, organizovaný studentským parlamentem Gymnázia v Tišnově ke příležitosti dne studentstva.
+                    Středoškolský turnaj v počítačových hrách.
                 </Paragraph>
                 <CTA onClick={() => {
-                    window.location.href="https://discord.gg/mUF2Udvdvn"
+                    window.location.href="https://discord.gg/WXtGFxrAdR"
                 }} className={classes.Header__cta}>
                     Spoj se s námi na discordu!
                     <img className={classes.Header__cta__logo} src={discordLogo} alt="Discord logo"></img>
