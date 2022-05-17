@@ -26,7 +26,7 @@ const Footer = () => {
             <div className={classes.Footer__discord}>
                 <img className={classes.Footer__discordLogo} src={discordLogo}></img>
                 <p className={classes.Footer__discordLink}>
-                    <a href="https://discord.gg/mUF2Udvdvn">https://discord.gg/mUF2Udvdvn</a>
+                    <a href="https://discord.gg/WXtGFxrAdR">https://discord.gg/WXtGFxrAdR</a>
                 </p>
             </div>
             

@@ -18,105 +18,99 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const schedule = [
     {
-        date: '17.11.2021',
+        date: '17.6.2022',
         description: '',
         events: [
             {
                 game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
-                        beginTime: '10:00',
-                        endTime: '13:00'
+                        beginTime: '16:00',
+                        endTime: '21:00'
                     }
                 ]
             },
+     ]   
+    },
+    
+    {
+        date: '18.6.2022',
+        description: '',
+        events: [
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '14:00',
+                        endTime: '21:00'
+                    }
+                ]
+            },
+     ]   
+    },
+
+    {
+        date: '19.6.2022',
+        description: '',
+        events: [
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '14:00',
+                        endTime: '21:00'
+                    }
+                ]
+            },
+     ]   
+    },
+
+    {
+        date: '24.6.2022',
+        description: '',
+        events: [
             {
                 game: GAMETYPES.MINECRAFT,
                 segments: [
-                    {
-                        beginTime: '15:00',
-                        endTime: '18:00'
+                    { 
+                        beginTime: '16:00',
+                        endTime: '21:00'
                     }
                 ]
-            }
+            },
      ]   
     },
+
     {
-        date: '20.11.2021',
+        date: '25.6.2022',
+        description: '',
         events: [
             {
                 game: GAMETYPES.LOL,
                 segments: [
-                    {
+                    { 
                         beginTime: '14:00',
-                        endTime: '20:00'
+                        endTime: '21:00'
                     }
-                ]  
+                ]
             },
-            {
-                game: GAMETYPES.COUNTER_STRIKE,
-                segments: [
-                    {
-                        beginTime: '14:00',
-                        endTime: '20:00'
-                    }
-                ]  
-            }
-        ]
+     ]   
     },
+
     {
-        date: '21.11.2021',
+        date: '26.6.2022',
+        description: '',
         events: [
             {
                 game: GAMETYPES.LOL,
                 segments: [
-                    {
+                    { 
                         beginTime: '10:00',
                         endTime: '12:00'
-                    },
-                    {
-                        beginTime: '13:00',
-                        endTime: '20:00'
                     }
                 ]
             },
-            {
-                game: GAMETYPES.COUNTER_STRIKE,
-                segments: [
-                    {
-                        beginTime: '10:00',
-                        endTime: '12:00'
-                    },
-                    {
-                        beginTime: '13:00',
-                        endTime: '20:00'
-                    }
-                ]
-            },
-        ]
-    },
-    {
-        date: '27.11.2021',
-        events: [
-            {
-                game: GAMETYPES.LOL,
-                segments: [
-                    {
-                        beginTime: '13:00',
-                        endTime: '16:00'
-                    }
-                ]
-            },
-            {
-                game: GAMETYPES.COUNTER_STRIKE,
-                segments: [
-                    {
-                        beginTime: '16:00',
-                        endTime: '19:00'
-                    }
-                ]
-            }
-        ]
+     ]   
     }
 
 ]
