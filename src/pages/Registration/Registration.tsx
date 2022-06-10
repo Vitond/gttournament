@@ -31,26 +31,26 @@ const Registration = () => {
     }
 
     return <motion.div transition={routeTransition} key="registration" variants={routeVariants} initial="initial" animate="visible" exit="hidden" className={classes.Registration}>
-        {/* <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
-        <Heading type={headingTypes.h2} className={classes.Registration__subheading}>Důležité informace:</Heading> */}
+        <Heading className={classes.Registration__heading} type={headingTypes.main}>Přihláška do turnaje</Heading>
+        <Heading type={headingTypes.h2} className={classes.Registration__subheading}>Důležité informace:</Heading>
         <ul className={classes.Registration__importantList}>
-            {/* <li><Paragraph className={classes.Registration__important}>
+            <li><Paragraph className={classes.Registration__important}>
                Turnaje se můžou účastnit především studenti a učitelé pozvaných škol. Pro každý tým je však povolen jeden externista - účastník, který je ze školy, která není na seznamu pozvaných škol. Pokud není Vaše škola na seznamu, napište nám, můžeme ji kontaktovat!
             </Paragraph></li>
             <li> <Paragraph className={classes.Registration__important}>
             Všichni účastníci, kteří během turnaje nebudou plnoletí, musí odevzdat <a href="/parent_agreement.pdf" download="parent_agreement">souhlas rodičů s účastí v turnaji</a> na turnajvpocitacovychhrach@gym-tisnov.cz
             </Paragraph></li>
             <li><Paragraph className={classes.Registration__important}>
-                Přihlášky můžete podávat do 14.11.2021
-            </Paragraph></li> */}
-            <li><Paragraph className={classes.Registration__important}>
-                Registrace byla ukončena.
+                Přihlášky můžete podávat do 16.6.2022
             </Paragraph></li>
+            {/* <li><Paragraph className={classes.Registration__important}>
+                Registrace byla ukončena.
+            </Paragraph></li> */}
         </ul>
-        {/* <VariantSelect className={classes.Registration__variantSelect} currentVariant={registrationVariant} setFunction={setRegistrationVariant}></VariantSelect>
+        <VariantSelect className={classes.Registration__variantSelect} currentVariant={registrationVariant} setFunction={setRegistrationVariant}></VariantSelect>
         <form className={classes.Registration__form}>
             {variant}
-        </form> */}
+        </form>
     </motion.div>
 };
 
