@@ -18,7 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const schedule = [
     {
-        date: '17.6.2022',
+        date: '19.11.2022',
         description: '',
         events: [
             {
@@ -34,7 +34,7 @@ const schedule = [
     },
     
     {
-        date: '18.6.2022',
+        date: '20.11.2022',
         description: '',
         events: [
             {
@@ -50,7 +50,7 @@ const schedule = [
     },
 
     {
-        date: '19.6.2022',
+        date: '26.11.2022',
         description: '',
         events: [
             {
@@ -66,7 +66,7 @@ const schedule = [
     },
 
     {
-        date: '24.6.2022',
+        date: '27.11.2022',
         description: '',
         events: [
             {
@@ -80,39 +80,6 @@ const schedule = [
             },
      ]   
     },
-
-    {
-        date: '25.6.2022',
-        description: '',
-        events: [
-            {
-                game: GAMETYPES.LOL,
-                segments: [
-                    { 
-                        beginTime: '14:00',
-                        endTime: '21:00'
-                    }
-                ]
-            },
-     ]   
-    },
-
-    {
-        date: '26.6.2022',
-        description: '',
-        events: [
-            {
-                game: GAMETYPES.LOL,
-                segments: [
-                    { 
-                        beginTime: '10:00',
-                        endTime: '12:00'
-                    }
-                ]
-            },
-     ]   
-    }
-
 ]
 
 

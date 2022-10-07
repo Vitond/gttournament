@@ -41,7 +41,7 @@ const Registration = () => {
             Všichni účastníci, kteří během turnaje nebudou plnoletí, musí odevzdat <a href="/parent_agreement.pdf" download="parent_agreement">souhlas rodičů s účastí v turnaji</a> na turnajvpocitacovychhrach@gym-tisnov.cz
             </Paragraph></li>
             <li><Paragraph className={classes.Registration__important}>
-                Přihlášky můžete podávat do 16.6.2022
+                Přihlášky můžete podávat do 15.11.2022
             </Paragraph></li>
             {/* <li><Paragraph className={classes.Registration__important}>
                 Registrace byla ukončena.

@@ -9,7 +9,7 @@ const GeneralRules = () => {
         <Heading className={classes.GeneralRules__heading} type={headingTypes.h2}>Obecná pravidla turnaje</Heading>
         <Heading className={classes.GeneralRules__subheading} type={headingTypes.h3}>Registrace</Heading>
         <div className={classes.GeneralRules__list}>
-        <Paragraph className={classes.GeneralRules__paragraph}>Registrace probíhá přes webové stránky turnaje  a to do 12.6.2022 23:59.</Paragraph>
+        <Paragraph className={classes.GeneralRules__paragraph}>Registrace probíhá přes webové stránky turnaje  a to do 15.11.2022 23:59.</Paragraph>
         <Paragraph className={classes.GeneralRules__paragraph}>Každý registrovaný tým musí uvést školu, za kterou hraje.</Paragraph>
         <Paragraph className={classes.GeneralRules__paragraph}>Každý účastník může hrát za jinou školu, než na které je.</Paragraph>
         <Paragraph className={classes.GeneralRules__paragraph}>Každý účastník se může zaregistrovat pro danou hru právě jednou.</Paragraph>
