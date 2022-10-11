@@ -9,6 +9,7 @@ import GameLogo from "../../../../components/other/GameLogo/GameLogo";
 import rocketImage from '../../../../assets/rocket-wallpaper.webp';
 import lolImage from '../../../../assets/lol-wallpaper.jpg';
 import minecraftImage from '../../../../assets/minecraft-wallpaper.webp';
+import valorantImage from '../../../../assets/valorant-wallpaper.webp';
 import counterImage from '../../../../assets/counter-wallpaper.webp';
 
 import { useState } from 'react';
@@ -46,15 +47,15 @@ const schedule = [
                     }
                 ]
             },
-            // {
-            //     game: GAMETYPES.VALORANT,
-            //     segments: [
-            //         { 
-            //             beginTime: '13:00',
-            //             endTime: '18:00'
-            //         }
-            //     ]
-            // },
+            {
+                game: GAMETYPES.VALORANT,
+                segments: [
+                    { 
+                        beginTime: '13:00',
+                        endTime: '18:00'
+                    }
+                ]
+            },
      ]   
     },
 
@@ -92,7 +93,7 @@ const schedule = [
                 segments: [
                     { 
                         beginTime: '10:00',
-                        endTime: '13:00'
+                        endTime: '11:30'
                     }
                 ]
             },
@@ -131,6 +132,8 @@ const ThisYear = () => {
             backgroundImages.push(lolImage);
         } else if (event.game === GAMETYPES.ROCKET_LEAGUE) {
             backgroundImages.push(rocketImage);
+        } else if (event.game === GAMETYPES.VALORANT) {
+            backgroundImages.push(valorantImage);
         }
     })
     const backgroundElements = backgroundImages.map((imgSrc, id) => {
