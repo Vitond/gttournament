@@ -6,6 +6,7 @@ import minecraftLogo from '../../../assets/minecraft-logo.svg';
 import counterStrikeLogo from '../../../assets/counter-logo.svg';
 import leagueOfLegendsLogo from '../../../assets/league-logo.png';
 import rocketLeagueLogo from '../../../assets/rocket-logo.png';
+import valorantLogo from '../../../assets/valorant-logo.png';
 
 interface GameLogoProps {
     game: GAMETYPES,
@@ -37,6 +38,11 @@ const GameLogo: React.FC<GameLogoProps> = ({ game, className, onClick }) => {
             imgSrc = minecraftLogo;
             imgClass = classes.GameLogo_minecraft
             imgAlt = 'Minecraft Logo'
+            break;
+        case GAMETYPES.VALORANT:
+            imgSrc = valorantLogo;
+            imgClass = classes.GameLogo_valorant
+            imgAlt = 'Valorant Logo'
             break;
         default:
             break;
