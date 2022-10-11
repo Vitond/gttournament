@@ -66,7 +66,6 @@ const About = () => {
         <Heading type={headingTypes.h1} className={classes.About__heading}>O turnaji</Heading>
         <Paragraph className={classes.About__paragraph}>
         GT Tournament je turnaj v počítačových hrách, který je už již tradičně pořádaný především ku příležitosti Mezinárodního dne studentstva studentským parlamentem Gymnázia v Tišnově. Snažíme se poskytnout studentům prostor setkat se i mimo lavice.
-        Přidáš se letos i ty?
         </Paragraph>
         <Paragraph className={classes.About__paragraph}>
         Přidáš se letos i ty?
