@@ -22,11 +22,11 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.ROCKET_LEAGUE,
+                game: GAMETYPES.COUNTER_STRIKE,
                 segments: [
                     { 
-                        beginTime: '16:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -38,14 +38,23 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.COUNTER_STRIKE,
+                game: GAMETYPES.LOL,
                 segments: [
                     { 
-                        beginTime: '14:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '16:00'
                     }
                 ]
             },
+            // {
+            //     game: GAMETYPES.VALORANT,
+            //     segments: [
+            //         { 
+            //             beginTime: '13:00',
+            //             endTime: '18:00'
+            //         }
+            //     ]
+            // },
      ]   
     },
 
@@ -54,11 +63,20 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.COUNTER_STRIKE,
+                game: GAMETYPES.MINECRAFT,
+                segments: [
+                    { 
+                        beginTime: '10:00',
+                        endTime: '15:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
                         beginTime: '14:00',
-                        endTime: '21:00'
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -67,14 +85,32 @@ const schedule = [
 
     {
         date: '27.11.2022',
-        description: '',
+        description: 'Finále',
         events: [
             {
-                game: GAMETYPES.MINECRAFT,
+                game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
-                        beginTime: '16:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '13:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.LOL,
+                segments: [
+                    { 
+                        beginTime: '12:30',
+                        endTime: '14:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '15:00',
+                        endTime: '18:00'
                     }
                 ]
             },
