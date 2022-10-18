@@ -4,7 +4,8 @@ export const GAMENAMES: any = {
     [GAMETYPES.LOL]: 'League of Legends',
     [GAMETYPES.COUNTER_STRIKE]: 'Counter-Strike : Global Offensive',
     [GAMETYPES.MINECRAFT]: 'Minecraft',
-    [GAMETYPES.ROCKET_LEAGUE]: 'Rocket League'
+    [GAMETYPES.ROCKET_LEAGUE]: 'Rocket League',
+    [GAMETYPES.VALORANT]: 'Valorant'
 }
 
 export const CS_RANKS: any = {

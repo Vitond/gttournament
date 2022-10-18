@@ -47,6 +47,10 @@ const TeamForm: React.FC<RouteComponentProps> = (props) => {
         defaultContestantCount = 2;
         maxContestantCount = 2;
         minContestantCount = 2;
+    } else if (game === GAMETYPES.VALORANT) {
+        defaultContestantCount = 5;
+        maxContestantCount = 5;
+        minContestantCount = 5;
     }
 
     const [contestantCount, setContestantCount] = useState(defaultContestantCount);

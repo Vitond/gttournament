@@ -9,7 +9,8 @@ export enum GAMETYPES {
     'MINECRAFT' = 'MINECRAFT',
     'COUNTER_STRIKE' = 'COUNTER_STRIKE',
     'LOL' = 'LOL',
-    'ROCKET_LEAGUE' = 'ROCKET_LEAGUE'
+    'ROCKET_LEAGUE' = 'ROCKET_LEAGUE',
+    'VALORANT' = 'VALORANT'
 }
 
 export enum ROLES {
