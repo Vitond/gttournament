@@ -48,6 +48,7 @@ const GeneralRules = () => {
             <Paragraph className={classes.GeneralRules__paragraph}><a href="/rules/MINECRAFT.pdf">Minecraft</a></Paragraph>
             <Paragraph className={classes.GeneralRules__paragraph}><a href="/rules/LOL.pdf">League of Legends</a></Paragraph>
             <Paragraph className={classes.GeneralRules__paragraph}><a href="/rules/ROCKET_LEAGUE.pdf">Rocket League</a></Paragraph>
+            <Paragraph className={classes.GeneralRules__paragraph}><a href="/rules/VALORANT.pdf">Valorant</a></Paragraph>
         </div>
     </Section>
 }
