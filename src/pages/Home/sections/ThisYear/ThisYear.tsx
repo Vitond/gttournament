@@ -9,6 +9,7 @@ import GameLogo from "../../../../components/other/GameLogo/GameLogo";
 import rocketImage from '../../../../assets/rocket-wallpaper.webp';
 import lolImage from '../../../../assets/lol-wallpaper.jpg';
 import minecraftImage from '../../../../assets/minecraft-wallpaper.webp';
+import valorantImage from '../../../../assets/valorant-wallpaper.webp';
 import counterImage from '../../../../assets/counter-wallpaper.webp';
 
 import { useState } from 'react';
@@ -22,11 +23,11 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.ROCKET_LEAGUE,
+                game: GAMETYPES.COUNTER_STRIKE,
                 segments: [
                     { 
-                        beginTime: '16:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -38,11 +39,20 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.COUNTER_STRIKE,
+                game: GAMETYPES.LOL,
                 segments: [
                     { 
-                        beginTime: '14:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '16:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.VALORANT,
+                segments: [
+                    { 
+                        beginTime: '13:00',
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -54,11 +64,20 @@ const schedule = [
         description: '',
         events: [
             {
-                game: GAMETYPES.COUNTER_STRIKE,
+                game: GAMETYPES.MINECRAFT,
+                segments: [
+                    { 
+                        beginTime: '10:00',
+                        endTime: '15:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
                         beginTime: '14:00',
-                        endTime: '21:00'
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -67,14 +86,32 @@ const schedule = [
 
     {
         date: '27.11.2022',
-        description: '',
+        description: 'Finále',
         events: [
             {
-                game: GAMETYPES.MINECRAFT,
+                game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
-                        beginTime: '16:00',
-                        endTime: '21:00'
+                        beginTime: '10:00',
+                        endTime: '11:30'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.LOL,
+                segments: [
+                    { 
+                        beginTime: '12:30',
+                        endTime: '14:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '15:00',
+                        endTime: '18:00'
                     }
                 ]
             },
@@ -95,6 +132,8 @@ const ThisYear = () => {
             backgroundImages.push(lolImage);
         } else if (event.game === GAMETYPES.ROCKET_LEAGUE) {
             backgroundImages.push(rocketImage);
+        } else if (event.game === GAMETYPES.VALORANT) {
+            backgroundImages.push(valorantImage);
         }
     })
     const backgroundElements = backgroundImages.map((imgSrc, id) => {
