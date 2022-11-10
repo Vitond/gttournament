@@ -181,6 +181,8 @@ const TeamForm: React.FC<RouteComponentProps> = (props) => {
                 setInvalidMessages(['Dva registrovaní účastníci nemůžou mít stejný mail'])
             } else if (text === "CONTESTANT_ALREADY_REGISTERED") {
                 setInvalidMessages(['Minimálně jeden z účastníků je již pro tuto hru registrován.'])
+            } else if (text === "Registrace je jiz uzavrena") {
+                setInvalidMessages(['Registrace je již uzavřena'])
             } else {
                 setInvalidMessages(['Došlo k chybě. Zkontroluj svoje připojení a pokud problém přetrvává, kontaktuj organizátory na turnajvpocitacovychhrach@gym-tisnov.cz'])
             }
