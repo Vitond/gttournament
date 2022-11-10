@@ -52,7 +52,11 @@ const AloneForm: React.FC<RouteComponentProps> = props => {
             props.history.push('/success');
         }).catch(err => {
             console.log(err.response.data)
-            setInvalidMessages(['Nastala chyba, pokud to není internetem, napiš organizátorovi.'])
+            if (err.response.data === "Registrace je jiz uzavrena") {
+                setInvalidMessages(['Registrace je již uzavřena'])
+            }else {
+                setInvalidMessages(['Došlo k chybě. Zkontroluj svoje připojení a pokud problém přetrvává, kontaktuj organizátory na turnajvpocitacovychhrach@gym-tisnov.cz'])
+            }
         });
        
     }, [contestant, game, school, agreed]);
