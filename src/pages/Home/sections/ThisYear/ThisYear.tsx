@@ -31,6 +31,15 @@ const schedule = [
                     }
                 ]
             },
+            {
+                game: GAMETYPES.VALORANT,
+                segments: [
+                    { 
+                        beginTime: '12:00',
+                        endTime: '18:00'
+                    }
+                ]
+            },
      ]   
     },
     
@@ -43,19 +52,11 @@ const schedule = [
                 segments: [
                     { 
                         beginTime: '10:00',
-                        endTime: '16:00'
-                    }
-                ]
-            },
-            {
-                game: GAMETYPES.VALORANT,
-                segments: [
-                    { 
-                        beginTime: '13:00',
                         endTime: '18:00'
                     }
                 ]
             },
+          
      ]   
     },
 
