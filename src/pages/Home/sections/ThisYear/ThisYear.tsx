@@ -62,7 +62,7 @@ const schedule = [
 
     {
         date: '26.11.2022',
-        description: '',
+        description: 'Zápas ve hře Minecraft, kvalifikace Rocket League, semifinále CS:GO',
         events: [
             {
                 game: GAMETYPES.MINECRAFT,
@@ -82,19 +82,28 @@ const schedule = [
                     }
                 ]
             },
+            {
+                game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '15:00',
+                        endTime: '18:00'
+                    }
+                ]
+            },
      ]   
     },
 
     {
         date: '27.11.2022',
-        description: 'Finále',
+        description: 'Finále her Rocket League, League of Legends, CS:GO. Od 10:45 do 11:45 semifinále hry League of Legends.',
         events: [
             {
                 game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
                         beginTime: '10:00',
-                        endTime: '11:30'
+                        endTime: '10:45'
                     }
                 ]
             },
@@ -102,13 +111,22 @@ const schedule = [
                 game: GAMETYPES.LOL,
                 segments: [
                     { 
-                        beginTime: '12:30',
-                        endTime: '14:00'
+                        beginTime: '10:45',
+                        endTime: '11:45'
                     }
                 ]
             },
             {
                 game: GAMETYPES.COUNTER_STRIKE,
+                segments: [
+                    { 
+                        beginTime: '12:00',
+                        endTime: '15:00'
+                    }
+                ]
+            },
+            {
+                game: GAMETYPES.LOL,
                 segments: [
                     { 
                         beginTime: '15:00',
