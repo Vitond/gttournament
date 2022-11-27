@@ -102,8 +102,8 @@ const schedule = [
                 game: GAMETYPES.ROCKET_LEAGUE,
                 segments: [
                     { 
-                        beginTime: '10:00',
-                        endTime: '10:45'
+                        beginTime: '9:00',
+                        endTime: '10:00'
                     }
                 ]
             },
