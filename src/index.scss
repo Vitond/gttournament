@@ -19,6 +19,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: $color-blue-dark;
+  overflow-x: hidden;
 
   font-size: 1.6rem;
 }

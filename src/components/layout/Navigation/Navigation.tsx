@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion, AnimatePresence} from 'framer-motion';
+import YoutubeLogo from '../../../assets/youtube-logo.png'
+import TwitchLogo from '../../../assets/twitch-logo.svg';
 import React from 'react';
 
 interface NavigationProps {
@@ -10,7 +12,7 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = props => {
-    const isMobile = useMediaQuery({query: '(max-width: 700px)'});
+    const isMobile = useMediaQuery({query: '(max-width: 900px)'});
     const className = classes.Navigation + " " + props.className; 
     const hideMobileNavigation = useCallback(() => {
         setIsMobileNavigationShown(false);
@@ -54,6 +56,12 @@ const Navigation: React.FC<NavigationProps> = props => {
                 </li>
                 <li className={classes.Navigation__item}>
                     <NavLink activeClassName={classes.active} className={classes.Navigation__link} to="/documents">Dokumenty</NavLink>
+                </li>
+                <li className={classes.Navigation__item} onClick={() => {window.open("https://www.youtube.com/@gttournament/videos")}}>
+                    <img className={classes.Navigation__youtubeLogo} src={YoutubeLogo}></img>
+                </li>
+                <li className={classes.Navigation__item} onClick={() => {window.open("https://www.twitch.tv/gttournament_a")}}>
+                    <img className={classes.Navigation__twitchLogo} src={TwitchLogo}></img>
                 </li>
             </motion.ul>}
         </AnimatePresence>
