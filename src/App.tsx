@@ -35,7 +35,7 @@ function App() {
         <Switch location={location} key={location.key}>
           <Route path="/sponsors" exact component={Sponsors}></Route>
           <Route path="/documents" exact component={Documents}></Route>
-          <Route path="/registration" exact component={Registration}></Route>
+          {/* <Route path="/registration" exact component={Registration}></Route> */}
           <Route path="/contestants" exact component={Contestants}></Route>
           <Route path="/rules" exact component={Rules}></Route>
           <Route path="/" component={Home}></Route>
