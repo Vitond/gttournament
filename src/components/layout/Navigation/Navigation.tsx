@@ -42,9 +42,9 @@ const Navigation: React.FC<NavigationProps> = props => {
                 <li className={classes.Navigation__item}>
                     <NavLink exact activeClassName={classes.active} className={classes.Navigation__link} to="/">Domů</NavLink>
                 </li>
-                <li className={[classes.Navigation__item, classes.Navigation__item_registration].join(' ')}>
+                {/* <li className={[classes.Navigation__item, classes.Navigation__item_registration].join(' ')}>
                     <NavLink activeClassName={classes.active} className={[classes.Navigation__link, classes.Navigation__link_registration].join(' ')} to="/registration">Registrace</NavLink>
-                </li>
+                </li> */}
                 <li className={classes.Navigation__item}>
                     <NavLink activeClassName={classes.active} className={classes.Navigation__link} to="/contestants">Účastníci</NavLink>
                 </li>

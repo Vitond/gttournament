@@ -21,12 +21,15 @@ const HowToRegister: React.FC<RouteComponentProps> = (props) => {
         <Paragraph className={classes.HowToRegister__paragraph}>
            Pak už stačí jenom přečíst <span className={classes.HowToRegister__link}><NavLink to="/rules">pravidla</NavLink></span> (jsou důležitá), kliknout na tlačítko níže a vyplnit registraci! 
         </Paragraph>
-        <CTA onClick={() => {
+        <Paragraph className={classes.HowToRegister__paragraph}>
+            Registraci pro následující ročník otevíráme brzy.
+        </Paragraph>
+        {/* <CTA onClick={() => {
             props.history.push('/registration')
             window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
         }}className={classes.HowToRegister__cta}>
             Registrace
-        </CTA>    
+        </CTA>     */}
     </Section>
 };
 

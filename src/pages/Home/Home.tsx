@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <motion.div key="home" transition={routeTransition} variants={routeVariants} initial="initial" animate="visible" exit="hidden" className={classes.Home}>
             <Header></Header>
-            <ThisYear></ThisYear>
+            {/* <ThisYear></ThisYear> */}
             <HowToRegister></HowToRegister>
             <About></About>
         </motion.div>
