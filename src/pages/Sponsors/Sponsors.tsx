@@ -11,7 +11,7 @@ const Sponsors = () => {
         <Section className={''}>
             <Heading className={''} type={headingTypes.main}>Sponzoři</Heading>
             <img className={classes.Sponsors__packages} src={SponsorshipPackages}></img>
-            <p className={classes.Sponsors__contact}>Pokud máte zájem stát se sponzorem, kontaktujte nás na <b><a href="mailtoturnajvpocitacovychhrach@gym-tisnov.cz">turnajvpocitacovychhrach@gym-tisnov.cz</a></b>.</p>
+            <p className={classes.Sponsors__contact}>Pokud máte zájem stát se sponzorem, kontaktujte nás na <b><a href="mailto:turnajvpocitacovychhrach@gym-tisnov.cz">turnajvpocitacovychhrach@gym-tisnov.cz</a></b>.</p>
         </Section>
     </motion.div>
 };
