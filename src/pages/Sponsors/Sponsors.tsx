@@ -7,7 +7,7 @@ import ArtinLogo from '../../assets/artinlogo.png';
 import { motion } from 'framer-motion';
 
 const Sponsors = () => {
-    return <motion.div className={classes.Sponsors} variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial">
+    return <motion.div key="sponsors" className={classes.Sponsors} variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial">
         <Section className={''}>
             <Heading className={''} type={headingTypes.main}>Sponzoři</Heading>
             <div className={classes.Sponsors__sponsor}>

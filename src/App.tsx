@@ -30,7 +30,7 @@ function App() {
     <div className={classes.App}>
       <Navigation className={classes.App__navigation}></Navigation>
       <AnimatePresence exitBeforeEnter>
-        <ScrollToTop></ScrollToTop>
+        <ScrollToTop key="scroll-to-top"></ScrollToTop>
         <Route path="/success" component={Success}></Route>
         <Switch location={location} key={location.key}>
           <Route path="/sponsors" exact component={Sponsors}></Route>

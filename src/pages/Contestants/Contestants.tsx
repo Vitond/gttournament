@@ -9,7 +9,7 @@ import { headingTypes } from '../../types/types';
 
 const Contestants = () => {
    
-    return <motion.div variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial" className={classes.Contestants}>
+    return <motion.div key="contestants" variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial" className={classes.Contestants}>
         <Section className={''}>
             <Heading type={headingTypes.main} className={classes.Contestants__heading}>Účastníci</Heading>
         </Section>

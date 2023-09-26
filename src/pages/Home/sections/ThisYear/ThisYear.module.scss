@@ -1,14 +1,22 @@
 @import '../../../../variables.scss';
 
+$bp-mobile: 900px;
+$mobile-timeline-height: 60rem;
+$mobile-timeline-top: 20rem;
+$padding-left: 5%;
+
 .ThisYear {
     background-color: $color-blue-dark;
-    height: 80vh;
+    height: 100vh;
 
     position: relative;
     overflow: hidden;
 
     @media screen and (max-width: 1000px) {
-        height: 100rem;
+        height: 80rem;
+    }
+    @media screen and (max-width: $bp-mobile) {
+        height: 90rem;
     }
 
     &__timeAxis {
@@ -25,68 +33,50 @@
         top: 0;
         left: 0;
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: $bp-mobile) {
+            height: $mobile-timeline-height;
+           
             display: flex;
             flex-direction: column;
+
+            top: $mobile-timeline-top;
         }
-    };
+    }
     &__imageDiv {
-        @media screen and (max-width: 1000px) {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        @media screen and (max-width: $bp-mobile) {
+            display: flex;
 
             position: relative;
             width: 100%;
-            height: 50%;
             top: 0;
             left: 0;
-
-            display: flex;
-
             overflow: hidden;
+            
             &:first-child {
                 border-bottom: 4px solid $color-white;
             }
-            &:last-child {
-               
-            }
         }
-        
     }
     &__backgroundImage {
         position: absolute;
-
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: auto;
-
-        @media screen and (max-width: 1400px) {
-            transform: scale(2);
-        }
-        @media screen and (max-width: 500px) {
-            transform: scale(4);
-        }
-
-        &_0 {
-            clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
-
-            @media screen and (max-width: 1000px) {
-               clip-path: none;
-               z-index: -1;
-            }
-        }
-        &_1 {
-            z-index: -1;
-        };
+        object-fit: cover;
     }
     &__content {
-       width: 90%;
+       width: 100%;
        height: 100%;
        margin-left: auto;
        margin-right: auto;
+
        position: relative;
     }
     &__heading {
         padding-top: 2rem;
+        margin-left: $padding-left;
 
         @media screen and (max-width: 500px) {
             font-size: 4rem;
@@ -94,31 +84,31 @@
     }
     &__descriptions {
         margin-top: 2rem;
+        height: 100%;
+        width: 100%;
 
-        display: flex;
-        justify-content: space-between;
+        position: absolute;
 
-        @media screen and (max-width: 1000px) {
-            flex-direction: column;
-            height: 50%;
+        @media screen and (max-width: $bp-mobile) {
+            height: $mobile-timeline-height;
+            
+            top: $mobile-timeline-top;
         }
     }
     &__description {
         width: max-content;
+        height: 10rem;
 
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: space-between;
 
-        & > *:not(:last-child) {
-            margin-right: 2rem;
-        }
+        position: absolute;
         
         &__img {
             width: 8rem;
             height: 8rem;
-        }
-        &__times {
-
         }
         &__time {
             font-size: 2rem;
@@ -130,5 +120,8 @@
 
         position: absolute;
         left: 0;
+    }
+    &__paragraph {
+        margin-left: $padding-left;
     }
 }

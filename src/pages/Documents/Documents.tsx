@@ -18,7 +18,7 @@ const Documents = () => {
             </div>
         </div></a>
     })
-    return <motion.div className={classes.Documents} variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial">
+    return <motion.div key="documents" className={classes.Documents} variants={routeVariants} transition={routeTransition} exit="hidden" animate="visible" initial="initial">
         <Section className={''}>
             <Heading className={classes.Documents__heading} type={headingTypes.main}>Dokumenty</Heading>
             <ul className={classes.Documents__list}>

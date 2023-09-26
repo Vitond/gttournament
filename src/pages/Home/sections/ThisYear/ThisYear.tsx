@@ -1,6 +1,7 @@
 import Section from "../../../../components/layout/Section/Section";
 import classes from './ThisYear.module.scss';
 import Heading from "../../../../components/typography/Heading";
+import { useMediaQuery } from "react-responsive";
 import Paragraph from "../../../../components/typography/Paragraph";
 import { headingTypes } from "../../../../types/types";
 import TimeAxis from "../../../../components/other/TimeAxis/TimeAxis";
@@ -140,6 +141,7 @@ const schedule = [
 
 
 const ThisYear = () => {
+    const isMobile = useMediaQuery({query: '(max-width: 900px)'});
     const [currentDay, setCurrentDay] = useState(0);
     let backgroundImages: string[]  = [];
     schedule[currentDay].events.forEach((event) => {
@@ -156,21 +158,42 @@ const ThisYear = () => {
         }
     })
     const backgroundElements = backgroundImages.map((imgSrc, id) => {
-        let BGclassName = '';
-        if (backgroundImages.length > 1) {
-            BGclassName = classes.ThisYear__backgroundImage + " " + (id === 0 ? classes.ThisYear__backgroundImage_0 : classes.ThisYear__backgroundImage_1);
-        } else {
-            BGclassName = classes.ThisYear__backgroundImage;
-        }
-        return <div className={classes.ThisYear__imageDiv}><img className={BGclassName} src={imgSrc}></img></div>
+        const count = backgroundImages.length;
+        return  <div 
+                    key={id}
+                    className={classes.ThisYear__imageDiv}
+                    style={!isMobile ? {
+                        position: 'absolute',
+                        transform: `translateX(${id*100/count-10}%)`,
+                        clipPath: `polygon(20% 0, calc((100%/${count}) + 20%) 0, calc((100%/${count})) 100%, 0 100%)`,
+                        zIndex: -(id + 1)
+                    } : {
+                        position: 'relative'
+                    }}
+                    >
+                    <img 
+                        className={classes.ThisYear__backgroundImage}
+                        src={imgSrc}>
+                    </img>
+                </div>
     });
-    const descriptionElements = schedule[currentDay].events.map((event) => {
-        const times = event.segments.map((segment) => { 
-            return <div className={classes.ThisYear__description__time}>    
+    const descriptionElements = schedule[currentDay].events.map((event, id) => {
+        const times = event.segments.map((segment, id) => { 
+            return <div key={id} className={classes.ThisYear__description__time}>    
                 <p>{segment.beginTime} - {segment.endTime}</p>
             </div>
         });
-        return <div className={classes.ThisYear__description}>
+        const count = backgroundElements.length;
+        return <div className={classes.ThisYear__description}
+                key={id}
+                style={!isMobile ? {
+                    left: `${id*100/count+8}%`,
+                    top: 0
+                } : {
+                    left: '5%',
+                    top: `${id*100/count}%`
+                }}
+            >
             <GameLogo className={''} game={event.game}></GameLogo>
             <div className={classes.ThisYear__description__times}>
                 {times}
