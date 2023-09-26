@@ -11,6 +11,10 @@
         margin-top: 15rem;
         padding-bottom: 15rem;
     }
+    @media screen and (max-width: 600px) {
+        margin-top: 5rem;
+        padding-bottom: 10rem;
+    }
 
     &__sponsor {
         margin-top: 4rem;
@@ -22,6 +26,25 @@
             @media screen and (max-width: 500px) {
                 width: 30rem;
             }
+        }
+    }
+
+    &__packages {
+        width: 100%;
+        margin-top: 10rem;
+        display: block;
+
+        @media screen and (max-width: 600px) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__contact {
+        font-size: 3rem;
+        color: $color-white;
+
+        a {
+            color: $color-white;
         }
     }
 }
